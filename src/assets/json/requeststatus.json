@@ -1,0 +1,13 @@
+{
+    "RequestStatusData" : [
+        {
+            "requestStatus" : "CREATED"
+        },
+        {
+            "requestStatus" : "Pending"
+        },
+        {
+            "requestStatus" : "RESOLVED"
+        }
+    ]
+}

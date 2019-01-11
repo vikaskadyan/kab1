@@ -1,0 +1,41 @@
+<div class="custom">
+    <div class="text-center custom-align" *ngIf="isTotalStatusVisible">
+        <div class="row">
+            <div class="col-xs-6 col-sm-3 ">
+                <div class="card-box bg-primary widget-flat border-danger text-white custom-round-corner">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <h3 class="m-b-10">{{_totalnoofrequest_cookie}}</h3>
+                            <p class="text-uppercase m-b-5 font-13 font-600">Total Request</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <i class="fa fa-eye fa-2x" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <div class="card-box bg-danger widget-flat border-danger text-white custom-round-corner">
+                    <i class="fi-archive"></i>
+                    <h3 class="m-b-10">{{_totalrequestcreated_cookie}}</h3>
+                    <p class="text-uppercase m-b-5 font-13 font-600">Request Created</p>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <div class="card-box widget-warning border-warning bg-warning text-white custom-round-corner">
+                    <i class="fi-help"></i>
+                    <h3 class="m-b-10">{{_totalrequestprocessed_cookie}}</h3>
+                    <p class="text-uppercase m-b-5 font-13 font-600">Request Pending</p>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 ">
+                <div class="card-box widget-flat border-success bg-success text-white custom-round-corner">
+                    <i class="fi-delete"></i>
+                    <h3 class="m-b-10">{{_totalrequestresolved_cookie}}</h3>
+                    <p class="text-uppercase m-b-5 font-13 font-600">Request Resolved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

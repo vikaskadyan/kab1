@@ -1,0 +1,38 @@
+<div class="row">
+  <input type="button" class="btn btn-outline-success my-2 my-sm-0" (click)="startactivity($event);" value="start activity" [disabled]="checkButtonStatus()"/>
+  Total distance : {{totaldistance}} km.   and speed is : {{speed}} km/hr ....... Date selected is {{date}}
+  <p-calendar [(ngModel)]="date" showTime="true" hourFormat="12"  pattern="MM/dd/yyyy HH:mm:ss" dataType="string"></p-calendar>
+</div>
+
+<p-dialog [(visible)]="displayNoDateSelect" [responsive]="true">
+    <p-header>
+        No Date Select
+    </p-header>
+    Please Select Date for which you want to check location.
+    <p-footer>
+        <button type="button" pButton icon="fa-check" (click)="displayNoDateSelect=false" label="OK"></button>
+    </p-footer>
+</p-dialog>
+
+<agm-map style="height: 90vh" [latitude]="maplatitude" [longitude]="maplongitude" [zoom]="zoomlevel">
+
+    <agm-marker *ngFor="let p of markers ; let pIndex = index; " [(latitude)]="p.latitude" [(longitude)]="p.longitude"
+        [iconUrl]="getMarkerURL()" [markerDraggable]="false">
+    </agm-marker>
+
+    <agm-polyline
+    [geodesic]="true"
+    [strokeOpacity]='0.6'
+    [strokeWeight]='4'
+    [strokeColor]="'#2196f3'"
+    >
+    <ng-container
+      *ngFor="let p of sosUserDetails ; let pIndex = index; ">
+      <agm-polyline-point
+        [(latitude)]="p.latitude"
+        [(longitude)]="p.longitude">
+      </agm-polyline-point>
+    </ng-container>
+  </agm-polyline>
+
+</agm-map>

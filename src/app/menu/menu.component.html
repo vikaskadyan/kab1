@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-md navbar-light bg-faded" *ngIf="isMenuVisible">
+  <button class="navbar-toggler hidden-lg-up float-xs-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">
+    <img src="assets/images/img-01.png" width="70" height="30" class="d-inline-block align-top" alt=""> KAB
+
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+    <ul class="navbar-nav mr-auto" *ngIf="isHomeLinksVisible">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+    </ul>
+
+  
+    <div class="logindiv">
+      <form class="form-inline my-2 my-lg-0" *ngIf="isSigninoutbuttonVisible" >
+        <input type="button" class="btn btn-outline-success my-2 my-sm-0" (click)="logoutButtonClick($event);" value="Logout"/>
+    </form>
+    </div>
+    
+
+  </div>
+  
+</nav>

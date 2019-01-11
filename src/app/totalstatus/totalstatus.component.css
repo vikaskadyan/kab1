@@ -1,0 +1,17 @@
+.custom {
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+
+}
+
+.custom-align {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+.custom-round-corner {
+    border-radius: 3px;
+}

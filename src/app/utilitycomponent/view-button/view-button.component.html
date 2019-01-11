@@ -1,0 +1,155 @@
+<div class="container-fluid custom-responsive-container1">
+   <!-- <div class="container scroll-area">-->
+        <div class="row">
+            
+            <div class="col-sm-9 left">
+
+                <agm-map style="border-radius:10px;height:90vh;" [latitude]="userLat" [longitude]="userLong">
+
+                    <agm-marker [latitude]="userLat" [longitude]="userLong" [iconUrl]="">
+
+                    </agm-marker>
+
+                    <agm-marker [latitude]="soslat" [longitude]="soslong" [iconUrl]="">
+
+                    </agm-marker>
+
+                    <agm-direction [origin]="direction.origin" [destination]="direction.destination"></agm-direction>
+
+                </agm-map>
+
+            </div>
+
+
+
+            <div class="col-sm-3 right custommarginright overflow paddingtop">
+                <div class="container scroll-area">
+
+                    <div class="row custom">
+
+                        <div class="col-sm-12 smalltext textalignleft">
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <img src="./assets/images/Add-user-01.svg" alt="IMG">
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="table">
+                                    <table class="table table-responsive popupaddress">
+                                        <tbody>
+
+                                            <tr>
+                                                <td>
+                                                    <strong>
+                                                        Name </strong>
+                                                </td>
+                                                <td class="text-primary">{{firstname}} {{lastname}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>
+                                                        Address </strong>
+                                                </td>
+                                                <td class="text-primary">{{address}}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <strong>
+                                                        Mobile </strong>
+                                                </td>
+                                                <td class="text-primary"> {{mobile}}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <strong>
+                                                        Status </strong>
+                                                </td>
+                                                <td class="text-primary"> {{status}}</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row" style="padding-top:10px;">
+                        <div>
+                            <table class="">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="./assets/images/marker_greenA.png" alt="IMG">
+                                        </td>
+                                        <td>
+                                            SOS User Location
+                                        </td>
+                                    </tr>
+                                    <br>
+                                    <tr style="padding-top:50px;">
+                                        <td>
+                                            <img src="./assets/images/markerB.png" alt="IMG">
+                                        </td>
+                                        <td>
+                                            Control Room Location
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row" style="padding-top:1vh">
+            <div class="col-sm-9 col-xs-9 ">
+
+            </div>
+            <div class="col-sm-3 col-xs-3">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-6 center">
+                        <button type="button" class="btn btn-outline-primary" (click)="openUpdateModal($event)">Update</button>
+                    </div>
+
+                    <div class="col-sm-6 col-xs-6 center">
+                        <button type="button" class="btn btn-outline-warning" (click)="dialogRef.close()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="row">
+        <div class="col-sm-12">
+            <div class="center">
+                <div class="row">
+
+
+                    <mat-dialog-actions align="left">
+                        <button md-raised-button [mat-dialog-close]="true">Update Status</button>
+                    </mat-dialog-actions>
+
+                    <mat-dialog-actions align="right">
+                        <button md-raised-button [mat-dialog-close]="true">Close</button>
+                    </mat-dialog-actions>
+                </div>
+            </div>
+        </div>
+
+    </div>-->
+   <!-- </div>-->
+</div>
